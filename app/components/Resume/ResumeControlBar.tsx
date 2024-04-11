@@ -12,7 +12,7 @@ import { useEffect } from "react";
 const ResumeControlBar = ({
   scale,
   setScale,
-  documentSize,
+  documentSize, 
   document,
   fileName,
 }: {
@@ -26,10 +26,11 @@ const ResumeControlBar = ({
     setScale,
     documentSize,
   });
-
+  
   const [instance, update] = usePDF({ document });
 
   useEffect(() => {
+    // console.log(document)
     update(document);
   }, [update, document]);
   return (
@@ -62,6 +63,7 @@ const ResumeControlBar = ({
         className="ml-1 flex items-center gap-1 rounded-md border border-gray-300 cursor-pointer px-3 py-2 hover:bg-gray-100 lg:ml-8"
         href={instance.url!}
         download={fileName}
+        onClick={() => console.log(fileName, instance)}
       >
         <ArrowDownTrayIcon className="h-4 w-4" />
         <span className="whitespace-nowrap">Download Resume</span>
