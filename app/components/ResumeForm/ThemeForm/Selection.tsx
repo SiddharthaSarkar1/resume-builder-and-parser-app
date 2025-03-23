@@ -146,9 +146,9 @@ export const DocumentSizeSelections = ({
             isSelected={type === selectedDocumentSize}
             onClick={() => handleSettingsChange("documentSize", type)}
           >
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center justify-center">
               <div>{type}</div>
-              <div className="text-xs">
+              <div className="text-xs text-center">
                 {type === "Letter" ? "(US, Canada)" : "(India,Other Countries)"}
               </div>
             </div>

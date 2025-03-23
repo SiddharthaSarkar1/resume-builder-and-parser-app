@@ -21,16 +21,9 @@ const TopNavBar = () => {
         <div className="flex h-10 w-full items-center justify-between">
           <Link href="/">
             <div className="flex items-center justify-center">
-              <Image
-                src={"assets/heart.svg"}
-                alt="logo img"
-                height={16}
-                width={16}
-                className="h-8 w-full animate-pulse"
-                priority
-              />
+              
               <h1 className="ml-3 text-xl whitespace-nowrap font-bold text-primary">
-                Resume Builder and Parser
+                Prepare Your Resume
               </h1>
             </div>
           </Link>
@@ -39,8 +32,8 @@ const TopNavBar = () => {
             className="flex items-center gap-2 text-sm font-medium"
           >
             {[
-              ["/resume-builder", "Builder"],
-              ["/resume-parser", "Parser"],
+              ["/resume-builder", "Build Your Resume"],
+              ["/resume-parser", "Parse Your Resume"],
             ].map(([href, text]) => (
               <Link
                 key={text}
